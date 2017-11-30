@@ -4,6 +4,7 @@
       <title>JWP Trello Login</title>
       <link type="text/css" rel="stylesheet" href="/lib/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="/css/login.css"/>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     </head>
 
     <body>
@@ -40,9 +41,14 @@
 
         <p class="alternatives-separator">or</p>
 
-        <a class="github-login waves-effect waves-light btn" href="#">
-            <div class="github-icon"></div>
-            <div class="github-login-text">facebook login</div>
+        <a class="github-login waves-effect waves-light btn" href="/login/github">
+            <i class="fa fa-github-square" aria-hidden="true"></i>
+           	Github 로그인
+        </a>
+		<br/>
+        <a class="waves-effect facebook-btn btn" href="/login/facebook">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            Facebook 로그인
         </a>
 
     </div>

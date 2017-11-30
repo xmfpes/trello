@@ -80,7 +80,7 @@ header .header-wrapper li a:hover{
 .login-box {
 
   width: 400px;
-  height: 480px;
+  height: 550px;
   margin: 120px auto 0 auto;
   padding-top: 10px;
 
@@ -166,4 +166,12 @@ header .header-wrapper li a:hover{
   margin-top: 20px;
   margin-bottom: 7px;
 
+}
+
+.facebook-btn{
+	margin: 0 auto;
+	height: 40px;
+	display:block;
+	width:230px;
+	background-color:#4968AD;
 }
