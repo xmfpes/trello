@@ -1,7 +1,5 @@
 package com.trello.security;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,7 +18,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		return
-				Optional.ofNullable(memberRepository.findByUemail(email))
+				memberRepository.findByUemail(email)
 				.filter(m -> m!= null)
 				.map(m -> new SecurityMember(m)).get();
 	}

@@ -1,5 +1,7 @@
 package com.trello.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -14,7 +16,9 @@ public class HomeController {
 		return "signUp";
 	}
 	@GetMapping("/login")
-	public String loginForm() {
+	public String loginForm(HttpServletRequest req) {
+		String referer = req.getHeader("Referer");
+		req.getSession().setAttribute("prevPage", referer);
 		return "login";
 	}
 }
